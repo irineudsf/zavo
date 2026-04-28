@@ -2,7 +2,7 @@
 import { useState } from 'react'
 
 const faqs = [
-  { q: 'Isso é sério? Posso realmente pagar o que quiser?', r: 'Sim. A gente acredita no trabalho que entrega. Se você ver valor, paga o que achar justo. Se não gostar do resultado — não cobra nada. Simples assim.' },
+  { q: 'Quanto custa o site?', r: 'O valor varia conforme o tipo de site e o escopo do projeto. A gente não coloca preço fixo na página porque cada negócio tem uma necessidade diferente. Manda uma mensagem no WhatsApp — em minutos você recebe a proposta, sem compromisso.' },
   { q: 'Quanto tempo leva para o site ficar pronto?', r: 'Até 7 dias úteis depois da gente conversar e você passar as informações do seu negócio. Rápido porque temos processo — não porque é simples.' },
   { q: 'Preciso entender de tecnologia para ter um site?', r: 'Não. A gente cuida de tudo: domínio, hospedagem, design e texto. Você só aprova o resultado final.' },
   { q: 'O site vai aparecer no Google?', r: 'Sim. Todo site da Zavo já sai com SEO básico configurado. Aparecer no Google leva tempo (geralmente 30 a 90 dias), mas você começa do jeito certo desde o primeiro dia.' },

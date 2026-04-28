@@ -10,19 +10,16 @@ export function CTAFinal() {
           Todo dia que passa sem site<br />é um cliente a menos.
         </h2>
         <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.5)', lineHeight: 1.65, marginBottom: 40 }}>
-          Não precisa de muito dinheiro. Não precisa de tempo. Não precisa de conhecimento técnico.
-          Precisa só de 15 minutos pra conversar com a gente.
+          Conversa de 15 minutos no WhatsApp. Proposta na hora. Site no ar em até 7 dias.
+          Sem reunião, sem burocracia.
         </p>
         <a href={WHATSAPP_URL} target="_blank" rel="noopener" style={{
           display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
           background: '#F5B800', color: '#0D0D0D', fontWeight: 800, fontSize: 18,
           padding: '20px 40px', borderRadius: 12, textDecoration: 'none', minHeight: 64
         }}>
-          Quero meu site agora →
+          Falar com a Zavo agora →
         </a>
-        <span style={{ display: 'block', fontSize: 13, color: 'rgba(255,255,255,0.35)', marginTop: 12 }}>
-          Você decide quanto vale. Garantia de satisfação ou não paga.
-        </span>
       </div>
     </section>
   )

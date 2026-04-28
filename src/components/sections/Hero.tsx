@@ -61,9 +61,8 @@ export function Hero() {
             fontWeight: 900, color: '#fff',
             letterSpacing: -2, lineHeight: 1.05, marginBottom: 24,
           }}>
-            A maioria dos pequenos negócios<br />
-            perde clientes todo dia —<br />
-            <span style={{ color: '#F5B800' }}>e nem sabe por quê.</span>
+            Seu negócio perde cliente todo dia —<br />
+            <span style={{ color: '#F5B800' }}>e o concorrente que tem site agradece.</span>
           </h1>
 
           <p style={{
@@ -73,7 +72,7 @@ export function Hero() {
             lineHeight: 1.7,
           }}>
             O cliente te pesquisou, não te achou, foi pro concorrente. Simples assim.
-            A Zavo cria o site que coloca seu negócio na frente de quem já quer comprar de você.
+            A Zavo cria o site que coloca seu negócio na frente de quem já quer comprar de você. Entrega em até 7 dias.
           </p>
 
           <div style={{ pointerEvents: 'auto' }}>
@@ -90,14 +89,8 @@ export function Hero() {
                 boxShadow: '0 0 32px rgba(245,184,0,0.25)',
               }}
             >
-              Quero meu site agora
+              Quero meu site →
             </a>
-            <span style={{
-              display: 'block', fontSize: 13,
-              color: 'rgba(255,255,255,0.35)', marginTop: 14,
-            }}>
-              Você decide quanto pagar. Sem surpresa, sem enrolação.
-            </span>
           </div>
         </div>
       </div>
