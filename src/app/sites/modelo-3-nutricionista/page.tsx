@@ -39,6 +39,11 @@ export default function Modelo3Nutricionista() {
           from { transform: rotate(0deg) translateX(100px) rotate(0deg); }
           to { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
         }
+        @keyframes kenBurns {
+          0%, 100% { transform: scale(1) translate(0, 0); }
+          40% { transform: scale(1.07) translate(-12px, -6px); }
+          80% { transform: scale(1.04) translate(8px, -4px); }
+        }
 
         .fade {
           opacity:0; transform:translateY(35px);
@@ -152,7 +157,10 @@ export default function Modelo3Nutricionista() {
       {/* Hero */}
       <section style={{
         minHeight:'100vh',
-        background:'linear-gradient(160deg, #fdf8f4 0%, #faeee6 40%, #f5ddd0 100%)',
+        backgroundImage:'linear-gradient(160deg, rgba(253,248,244,0.80) 0%, rgba(250,238,230,0.76) 40%, rgba(245,221,208,0.73) 100%), url(https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=1600&q=80)',
+        backgroundSize:'cover',
+        backgroundPosition:'center top',
+        backgroundAttachment:'fixed',
         display:'flex', alignItems:'center', justifyContent:'center',
         padding:'100px 24px 80px',
         position:'relative', overflow:'hidden',
@@ -307,10 +315,16 @@ export default function Modelo3Nutricionista() {
       <section style={{ padding:'96px 24px', background:'white' }}>
         <div className="g2" style={{ maxWidth:'1000px', margin:'0 auto', display:'grid', gridTemplateColumns:'1fr 1fr', gap:'80px', alignItems:'center' }}>
           <div className="fade-r" style={{ order: 2 }}>
-            <div style={{ background:'linear-gradient(135deg, #faeee6, #f5ddd0)', borderRadius:'24px', padding:'48px', textAlign:'center' }}>
-              <span style={{ fontSize:'7rem', display:'block', marginBottom:'16px', animation:'breathe 4s ease-in-out infinite' }}>👩‍🍳</span>
-              <p style={{ color:'#9a7a6a', fontSize:'13px', marginBottom:'24px' }}>Foto da nutricionista</p>
-              <div style={{ display:'flex', flexDirection:'column', gap:'8px' }}>
+            <div style={{ borderRadius:'24px', overflow:'hidden', boxShadow:'0 16px 48px rgba(180,100,60,0.15)', border:'1.5px solid rgba(224,112,80,0.2)' }}>
+              <div style={{ height:'340px', overflow:'hidden', position:'relative' }}>
+                <img
+                  src="https://images.unsplash.com/photo-1559839914-17aae19cec71?w=700&q=85"
+                  alt="Camila Rocha — Nutricionista"
+                  style={{ width:'100%', height:'100%', objectFit:'cover', objectPosition:'top center', animation:'kenBurns 22s ease-in-out infinite' }}
+                />
+                <div style={{ position:'absolute', inset:0, background:'linear-gradient(to bottom, transparent 55%, rgba(253,248,244,0.9) 100%)' }} />
+              </div>
+              <div style={{ background:'linear-gradient(135deg, #faeee6, #f5ddd0)', padding:'24px', textAlign:'center', display:'flex', flexDirection:'column', gap:'8px' }}>
                 {['CRN 3-23456','UNICAMP — Nutrição','Pós: Nutrição Integrativa','Pós: Nutrição Funcional'].map((c,i) => (
                   <div key={i} style={{ background:'white', border:'1.5px solid rgba(224,112,80,0.2)', color:'#c05a38', padding:'8px 20px', borderRadius:'100px', fontSize:'12px', fontWeight:700 }}>
                     {c}

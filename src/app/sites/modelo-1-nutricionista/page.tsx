@@ -17,7 +17,7 @@ export default function Modelo1Nutricionista() {
       { threshold: 0.15 }
     )
 
-    document.querySelectorAll('.reveal').forEach((el) => {
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach((el) => {
       observerRef.current?.observe(el)
     })
 
@@ -66,6 +66,11 @@ export default function Modelo1Nutricionista() {
         @keyframes shimmer {
           0% { background-position: -200% center; }
           100% { background-position: 200% center; }
+        }
+        @keyframes kenBurns {
+          0%, 100% { transform: scale(1) translate(0, 0); }
+          40% { transform: scale(1.07) translate(-12px, -6px); }
+          80% { transform: scale(1.04) translate(8px, -4px); }
         }
 
         .reveal {
@@ -206,7 +211,10 @@ export default function Modelo1Nutricionista() {
       {/* Hero */}
       <section style={{
         minHeight: '100vh',
-        background: 'linear-gradient(135deg, #1a472a 0%, #2d6a4f 60%, #40916c 100%)',
+        backgroundImage: 'linear-gradient(135deg, rgba(26,71,42,0.91) 0%, rgba(45,106,79,0.87) 60%, rgba(64,145,108,0.82) 100%), url(https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1600&q=80)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -371,15 +379,22 @@ export default function Modelo1Nutricionista() {
             <div style={{
               width: '100%',
               paddingBottom: '120%',
-              background: 'linear-gradient(135deg, #1a472a, #40916c)',
               borderRadius: '4px',
               position: 'relative',
               overflow: 'hidden',
+              boxShadow: '0 24px 64px rgba(26,71,42,0.2)',
             }}>
-              <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', color: 'white', gap: '8px' }}>
-                <span style={{ fontSize: '5rem' }}>👩‍⚕️</span>
-                <p style={{ fontFamily: 'sans-serif', fontSize: '14px', opacity: 0.7 }}>Foto da nutricionista</p>
-              </div>
+              <img
+                src="https://images.unsplash.com/photo-1559839914-17aae19cec71?w=700&q=85"
+                alt="Dra. Ana Lima — Nutricionista"
+                style={{
+                  position: 'absolute', inset: 0,
+                  width: '100%', height: '100%',
+                  objectFit: 'cover', objectPosition: 'top center',
+                  animation: 'kenBurns 22s ease-in-out infinite',
+                }}
+              />
+              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, transparent 65%, rgba(26,71,42,0.3) 100%)' }} />
             </div>
           </div>
           <div className="reveal-right">

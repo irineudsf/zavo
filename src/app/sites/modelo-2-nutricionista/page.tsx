@@ -55,6 +55,11 @@ export default function Modelo2Nutricionista() {
           0%,100% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); }
           50% { box-shadow: 0 0 0 14px rgba(37,211,102,0); }
         }
+        @keyframes kenBurns {
+          0%, 100% { transform: scale(1) translate(0, 0); }
+          40% { transform: scale(1.07) translate(-12px, -6px); }
+          80% { transform: scale(1.04) translate(8px, -4px); }
+        }
 
         .rev {
           opacity:0; transform:translateY(40px);
@@ -163,7 +168,10 @@ export default function Modelo2Nutricionista() {
       {/* Hero */}
       <section style={{
         minHeight: '100vh',
-        background: 'linear-gradient(135deg, #0a0f0a 0%, #0f1f0a 50%, #0a1a0f 100%)',
+        backgroundImage: 'linear-gradient(135deg, rgba(10,15,10,0.93) 0%, rgba(15,31,10,0.89) 50%, rgba(10,26,15,0.91) 100%), url(https://images.unsplash.com/photo-1512621776951-a57ef161c23b?w=1600&q=80)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
         display: 'flex', alignItems: 'center', justifyContent: 'center',
         padding: '100px 24px 60px',
         position: 'relative', overflow: 'hidden',
@@ -319,10 +327,16 @@ export default function Modelo2Nutricionista() {
       <section id="sobre" style={{ padding:'96px 24px', background:'#0a0f0a' }}>
         <div className="g2" style={{ maxWidth:'1000px', margin:'0 auto', display:'grid', gridTemplateColumns:'1fr 1fr', gap:'80px', alignItems:'center' }}>
           <div className="rev-l">
-            <div style={{ background:'rgba(132,204,22,0.08)', border:'2px solid rgba(132,204,22,0.3)', borderRadius:'12px', padding:'48px', textAlign:'center', animation:'borderAnim 3s ease infinite' }}>
-              <div style={{ fontSize:'6rem', marginBottom:'16px' }}>👩‍💻</div>
-              <p style={{ color:'rgba(255,255,255,0.4)', fontSize:'13px' }}>Foto da nutricionista</p>
-              <div style={{ marginTop:'24px', display:'flex', flexDirection:'column', gap:'8px' }}>
+            <div style={{ borderRadius:'12px', overflow:'hidden', border:'2px solid rgba(132,204,22,0.3)', animation:'borderAnim 3s ease infinite' }}>
+              <div style={{ height:'340px', overflow:'hidden', position:'relative' }}>
+                <img
+                  src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=700&q=85"
+                  alt="Vitória Santos — Nutricionista"
+                  style={{ width:'100%', height:'100%', objectFit:'cover', objectPosition:'top center', animation:'kenBurns 22s ease-in-out infinite' }}
+                />
+                <div style={{ position:'absolute', inset:0, background:'linear-gradient(to bottom, transparent 45%, rgba(10,15,10,0.85) 100%)' }} />
+              </div>
+              <div style={{ background:'rgba(132,204,22,0.08)', padding:'24px', textAlign:'center', display:'flex', flexDirection:'column', gap:'8px' }}>
                 {['CRN 3-98765','Formada UNIFESP','Especialista em Emagrecimento'].map((c,i) => (
                   <span key={i} style={{ background:'rgba(132,204,22,0.1)', border:'1px solid rgba(132,204,22,0.3)', color:'#84cc16', padding:'6px 16px', borderRadius:'100px', fontSize:'12px', fontWeight:700 }}>{c}</span>
                 ))}
