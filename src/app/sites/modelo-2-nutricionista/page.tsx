@@ -174,7 +174,7 @@ export default function Modelo2Nutricionista() {
         position: 'relative', overflow: 'hidden',
       }}>
         <img
-          src="https://images.unsplash.com/photo-1512621776951-a57ef161c23b?w=1600&q=80"
+          src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1600&q=80"
           alt=""
           aria-hidden="true"
           style={{ position:'absolute', inset:0, width:'100%', height:'100%', objectFit:'cover', objectPosition:'center', animation:'kenBurns 20s ease-in-out infinite', zIndex:0 }}
